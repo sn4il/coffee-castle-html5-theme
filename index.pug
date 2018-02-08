@@ -1,0 +1,120 @@
+extends _layout.pug
+include _mixins.pug
+
+block body
+
+  // About Us
+
+  section.pb-4.bg-dark.text-light
+    +section-heading('About Us')#about-us.text-white
+
+    .container
+      .row.justify-content-center
+        .col-12.col-sm-10.col-md-8.col-lg-6
+          p.mb-3.text-center
+            | Hi! Do you have a monent? We'd like to indroduce ourselves.
+            | We're Coffee Castle and our goal is to provide you with the best coffee in the world.
+
+      .row.justify-content-center
+        .col-10.col-sm-8.col-md-6.col-lg-4
+          +mega-button('See The Menu')(href='#our-menu').mb-3.js-nav-link
+
+      .row.justify-content-center
+        .col-10.col-sm-8.col-md-6.col-lg-4
+          img.m-2.js-coffee-mug(src='media/coffee_mug.svg')
+
+
+  // Our Menu (Featured)
+
+  section.pb-2.bg-beans.bg-cover.bg-parallax
+    +section-heading('Our Menu')#our-menu.text-white
+
+    .container.mb--5
+      .row.justify-content-center
+        .col-12.col-sm-8.col-md-4 #[+coffee-menu-item-card('Espresso', '$3.50', 'media/espresso.jpg').mb-3]
+        .col-12.col-sm-8.col-md-4 #[+coffee-menu-item-card('Doppio', '$7.00', 'media/doppio.jpg').mb-3.delay-1]
+        .col-12.col-sm-8.col-md-4 #[+coffee-menu-item-card('Americano', '$5.50', 'media/americano.jpg').mb-3.delay-2]
+
+
+  // Our Menu (All)
+
+  section.pt-5.pb-2.bg-dark
+    .container
+      .row
+        .col-12.col-md-6 #[+coffee-menu-item('Cappuccino', '$4.20').mb-3.mx-2]
+        .col-12.col-md-6 #[+coffee-menu-item('Latte', '$5.00').mb-3.mx-2]
+        .col-12.col-md-6 #[+coffee-menu-item('Flat White', '$5.50').mb-3.mx-2]
+        .col-12.col-md-6 #[+coffee-menu-item('Mocha', '$6.80').mb-3.mx-2]
+        .col-12.col-md-6 #[+coffee-menu-item('Macchiato', '$7.50').mb-3.mx-2]
+        .col-12.col-md-6 #[+coffee-menu-item('Ristretto', '$4.00').mb-3.mx-2]
+        .col-12.col-md-6 #[+coffee-menu-item('Irish Coffee', '$5.20').mb-3.mx-2]
+        .col-12.col-md-6 #[+coffee-menu-item('Hot Chocolate', '$6.10').mb-3.mx-2]
+        .col-12.col-md-6 #[+coffee-menu-item('Black Tea', '$2.50').mb-3.mx-2]
+
+
+  // Reviews    
+
+  .section.pb-4.bg-primary
+    +section-heading('Reviews')#reviews.text-dark
+
+    .container
+      .row
+        .col-12
+          #reviewsCarousel.carousel.slide.w-100
+            .carousel-inner.invisible.js-reviews-carousel
+              +reviews-carousel-item('media/person_1.jpg').active
+                | Nice waitresses, good music, fast serving.
+                | I’m very satisfied.
+                | Definitely visiting this place again.
+
+              +reviews-carousel-item('media/person_2.jpg')
+                | I'll give it 5 stars out of 5.
+                | Looking forward to dine here again.
+                | I love this place.
+
+              +reviews-carousel-item('media/person_3.jpg')
+                | I'm dining here with my friends every weekend.
+                | This is the best cafe in our area.
+                | I definitely recommend it.
+
+            a(href='#reviewsCarousel', data-slide='prev').carousel-control-prev.bg-vignette-to-right-primary
+              sapn.carousel-control-prev-icon
+
+            a(href='#reviewsCarousel', data-slide='next').carousel-control-next.bg-vignette-to-left-primary
+              sapn.carousel-control-next-icon
+
+
+  // Instagram Feed
+
+  section.pb-4.bg-beans.bg-cover.bg-parallax
+    +section-heading('Instagram Feed')#instagram-feed.text-white
+
+    .container
+      .row.justify-content-center
+        .col-6.col-md-3 #[+instagram-feed-item('media/feed_1.jpg').mb-3]
+        .col-6.col-md-3 #[+instagram-feed-item('media/feed_2.jpg').mb-3.delay-1]
+        .col-6.col-md-3 #[+instagram-feed-item('media/feed_3.jpg').mb-3.delay-2]
+        .col-6.col-md-3 #[+instagram-feed-item('media/feed_4.jpg').mb-3.delay-3]
+
+      .row.justify-content-center
+        .col-10.col-sm-8.col-md-6.col-lg-4
+          +mega-button('Follow')(href='https://instagram.com/', target='_blank')
+
+
+  // Contact Us
+
+  section.bg-dark.pb-4
+    +section-heading('Contact Us')#contact-us.text-white
+    .container
+      .row
+        .col-12.col-lg-6
+          .pb-3.pb-lg-0.h-100
+            iframe(src='https://maps.google.com/maps?q=New%20York&output=embed', frameborder='0').w-100.h-100.invisible.js-map
+
+        .col-12.col-lg-6
+          form.text-center.text-lg-left.invisible.delay-3.js-form
+            input.form-control.mb-2(placeholder='Name')
+            input.form-control.mb-2(placeholder='Email')
+            textarea.form-control.mb-2(rows=5, placeholder='Message')
+
+            button.btn.btn-outline-primary.text-uppercase Submit

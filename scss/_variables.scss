@@ -1,0 +1,65 @@
+
+// Theme Colors
+
+$theme-colors: (
+  primary: #e69900,
+  secondary: #251f1a,
+  light: #cfcdcc,
+  dark: #0d0600
+);
+
+
+// Spacers
+
+$spacer: 2rem;
+
+$spacers: (
+  -1: -($spacer * .25),
+  -2: -($spacer * .5),
+  -3: -($spacer),
+  -4: -($spacer * 1.5),
+  -5: -($spacer * 3)
+);
+
+
+// Sizes
+
+$sizes: (
+  vw-100: 100vw,
+  vh-100: 100vh
+);
+
+
+// Paragraphs
+
+$paragraph-margin-bottom: 0;
+
+
+// Borders
+
+$border-width: 2px;
+
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+
+// Typography
+
+$font-family-serif: "Poly";
+$font-family-base: $font-family-serif;
+
+
+// Headings
+
+$headings-margin-bottom: 0;
+$headings-font-family: "Cinzel";
+$headings-line-height: 1;
+
+
+// Display Headings
+
+$display1-size: 6.5rem;
+$display2-size: 4.5rem;
+$display3-size: 2.5rem;
+$display4-size: 1.5rem;

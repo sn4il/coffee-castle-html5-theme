@@ -1,0 +1,28 @@
+{
+  "name": "coffee-castle-html5-theme",
+  "version": "0.0.0",
+  "description": "Coffee Castle HTML5 Theme",
+
+  "main": "gulpfile.js",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sn4il/coffee-castle-html5-theme.git"
+  },
+
+  "author": "Andrey Malyarchuk <me@sn4il.com> (https://sn4il.com/)",
+  "license": "MIT",
+
+  "dependencies": {
+    "animate.css": "^3.6.1",
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "waypoints": "^4.0.1"
+  },
+
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0"
+  }
+}

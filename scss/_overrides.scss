@@ -1,0 +1,54 @@
+
+// General
+
+html, body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: lighten(theme-color("primary"), 20%);
+  color: #fff;
+}
+
+
+// Navigation
+
+.nav {
+  font-family: $headings-font-family;
+  font-weight: bold;
+
+  a {
+    color: #fff;
+    outline: none;
+
+    &:hover {
+      color: lighten(theme-color("primary"), 30%);
+      text-decoration: none;
+    }
+
+    &.active {
+      color: theme-color("primary");
+    }
+  }
+}
+
+
+// Display Headings
+
+.display-1,
+.display-2,
+.display-3,
+.display-4 { font-family: "Alex Brush"; }
+
+
+// Carousel
+
+.carousel-control-prev,
+.carousel-control-next { opacity: 1; }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon { opacity: 0.5; }
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon { opacity: 0.9; }

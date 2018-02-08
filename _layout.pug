@@ -1,0 +1,77 @@
+doctype html
+
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+    title Coffee Castle HTML5 Theme
+
+
+    // CSS
+
+    // Google Fonts (CDN)
+    link(href='https://fonts.googleapis.com/css?family=Poly|Cinzel:400,700|Alex+Brush', rel='stylesheet')
+
+    // Animate.css
+    link(href='node_modules/animate.css/animate.min.css', rel='stylesheet')
+
+    // main.css
+    link(href='css/main.css', rel='stylesheet')
+
+  body.js-preload(data-spy='scroll', data-target='#nav' data-offset='84')
+    include _to-top.pug
+    include _header.pug
+
+    block body
+
+    include _footer.pug
+
+
+    // SFX
+
+    audio.js-audio-wind-chimes
+      source(src='media/wind_chimes.wav', type='audio/wav')
+
+    audio.js-audio-wind-up-1
+      source(src='media/wind_up_1.wav', type='audio/wav')
+
+    audio.js-audio-wind-up-2
+      source(src='media/wind_up_2.wav', type='audio/wav')
+
+    audio.js-audio-wind-up-3
+      source(src='media/wind_up_3.wav', type='audio/wav')
+
+    audio.js-audio-wind-up-4
+      source(src='media/wind_up_4.wav', type='audio/wav')
+
+
+    // JS
+
+    // jQuery
+    script(src='node_modules/jquery/dist/jquery.min.js')
+
+    // Bootstrap
+    script(src='node_modules/bootstrap/dist/js/bootstrap.min.js')
+
+    // Font Awesome (CDN)
+    script(src='https://use.fontawesome.com/releases/v5.0.6/js/all.js')
+
+    // Waypoints
+    script(src='node_modules/waypoints/lib/jquery.waypoints.min.js')
+
+    // nav.js
+    script(src='js/nav.js')
+
+    // navbar.js
+    script(src='js/navbar.js')
+
+    // to-top.js
+    script(src='js/to-top.js')
+
+    // waypoints.js
+    script(src='js/waypoints.js')
+
+    // preload.js
+    script(src='js/preload.js')

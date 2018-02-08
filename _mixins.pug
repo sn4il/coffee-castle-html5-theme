@@ -1,0 +1,44 @@
+mixin section-heading(text)
+  .d-flex.flex-column.align-items-center&attributes(attributes)
+    h2.mb-2.pt-4.text-uppercase= text
+
+    .mb-3
+      include media/swirl.svg
+
+
+mixin mega-button(text)
+  a.btn.btn-outline-primary.btn-lg.btn-block.text-uppercase.invisible.js-mega-button&attributes(attributes)= text
+
+
+mixin coffee-menu-item(name, price)
+  .d-flex.justify-content-between&attributes(attributes)
+    h4.display-4.text-white= name
+    .flex-grow.mb-1.mx-2.border-bottom-dotted.border-secondary
+    h5.text-light= price
+
+
+mixin coffee-menu-item-card(name, price, photo)
+  .invisible.js-coffee-menu-item-card&attributes(attributes)
+    .bg-white
+      img.img-fluid.p-1(src=photo)
+      h3.display-3.mb-2.p-2.bg-secondary.text-center.text-white= name
+      h4.text-center.text-secondary.font-weight-bold= price
+
+    svg.d-block(width='100%', height='32', preserveAspectRatio='none', viewBox='0,0 10,5')
+      polygon(points='0,0 5,5 10,0', style='fill: white;')
+
+
+mixin reviews-carousel-item(photo)
+  .carousel-item&attributes(attributes)
+    .row.justify-content-center.align-items-center.px-4.px-sm-5
+      .col-6.col-sm-4.col-md-3.col-lg-2
+        img(src=photo).mb-2.mb-sm-0.w-100.rounded-circle.border.border-secondary
+
+      .col-12.col-sm-8.col-md-6.col-lg-4
+        p.mb-0.text-center.text-sm-left.text-secondary
+          block
+
+
+mixin instagram-feed-item(photo)
+  a.d-block.invisible.js-instagram-feed-item&attributes(attributes)
+    img.img-fluid(src=photo)

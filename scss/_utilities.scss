@@ -1,0 +1,63 @@
+
+// Flex
+
+.flex-grow { flex-grow: 1; }
+.flex-shrink { flex-shrink: 1; }
+
+
+// Background
+
+.bg-cafe { background-image: url(../media/cafe.jpg); }
+.bg-beans { background-image: url(../media/beans.jpg); }
+
+@each $dir in (top right bottom left) {
+  .bg-vignette-to-#{$dir} { background-image: linear-gradient(to #{$dir}, rgba(0, 0, 0, .9), transparent); }
+
+  @each $col, $val in $theme-colors {
+    .bg-vignette-to-#{$dir}-#{$col} { background-image: linear-gradient(to #{$dir}, $val, transparent); }
+  }
+}
+
+@each $side, $val in (left: left, center: center, right: right) { .bg-#{$side} { background-position-x: #{$val}; } }
+@each $side, $val in (top: top, middle: center, bottom: bottom) { .bg-#{$side} { background-position-y: #{$val}; } }
+
+.bg-cover { background-size: cover; }
+.bg-parallax { background-attachment: fixed; }
+
+
+// Border
+
+@each $side in (top, right, bottom, left) {
+  @each $style in (dotted dashed) {
+    .border-#{$side}-#{$style} { border-#{$side}: $border-width $style $border-color; }
+  }
+}
+
+
+// Overflow
+
+@each $key, $val in (show: visible, hide: hidden, scroll: scroll, auto: auto) {
+  @each $infix in ('' -x -y) { .overflow#{$infix}-#{$key} { overflow#{$infix}: #{$val}; } }
+}
+
+
+// Transition & Animation
+
+.transition { transition: all 0.2s ease-out; }
+
+@each $val in (1 2 3) { .delay-#{$val} { animation-delay: #{$val * 0.15}s; } }
+
+
+// SVG
+
+.text-white svg { fill: #fff; }
+
+@each $key, $val in $theme-colors { .text-#{$key} svg { fill: $val; } }
+
+
+// Preload
+
+.js-preload * {
+  transition: none !important;
+  animation-play-state: paused !important;
+}

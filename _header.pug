@@ -1,0 +1,49 @@
+header#home.d-flex.flex-column.justify-content-between.h-vh-100.bg-cafe.bg-cover.bg-bottom.overflow-hide.js-header
+  include _social-links.pug
+
+  // Heading
+
+  .animated.flipInX.delay-3
+    .d-none.d-md-block
+      h1.display-1.text-center.text-white Coffee Castle
+      h2.text-center.text-white The Coffee House You'll Love.
+
+    img.d-block.d-md-none.mx-auto(src='media/crown.svg', width='128', height='100')
+
+
+  // Call To Action (CTA)
+
+  .container.d-none.d-md-block
+    .row.justify-content-center
+      .col-md-6.col-lg-4
+        +mega-button('Learn More')(href='#about-us').js-nav-link.delay-3
+
+
+  // Navbar
+
+  .bg-vignette-to-top
+    .container
+      .row
+        .col-12
+          .border-top.border-light.animated.zoomIn
+
+    .js-navbar-wrap
+      .transition.js-navbar
+        .container
+          .row
+            .col-12
+
+
+              // Nav
+
+              .animated.slideInUp
+                nav#nav.nav.flex-column.flex-md-row.justify-content-around.align-items-center.py-2.js-nav
+                  a.nav-link.my-1.p-0.text-uppercase(href='#home') Home
+                  a.nav-link.my-1.p-0.text-uppercase(href='#about-us') About Us
+                  a.nav-link.my-1.p-0.text-uppercase(href='#our-menu') Our Menu
+
+                  img.d-none.d-md-block(src='media/crown.svg', width='64', height='50')
+
+                  a.nav-link.my-1.p-0.text-uppercase(href='#reviews') Reviews
+                  a.nav-link.my-1.p-0.text-uppercase(href='#instagram-feed') Feed
+                  a.nav-link.my-1.p-0.text-uppercase(href='#contact-us') Contact Us
